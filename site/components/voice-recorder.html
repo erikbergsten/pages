@@ -1,0 +1,28 @@
+---
+layout: components.njk
+tags: component
+component: voice-recorder
+description: |
+  A custom-element that extends **button** and uses the **MediaRecorder API** to
+  record sound when pressed. The voice-recorder emits a custom event called
+  **recording-finished** when the button is released with a webm audo **blob**
+  in the event details. Use the normal css pseudo classes to style, active while
+  recording, disabled if mic isn't available. The example displays a button and
+  captures the recording-finished event, creading an audio element and playing
+  it back.
+---
+<button is='voice-recorder'
+  class="group rounded-lg p-5 select-none
+         disabled:bg-gray-200
+         bg-green-200 active:bg-red-200"
+>
+  Press to record
+</button>
+<script>
+  document.querySelector('button[is=voice-recorder]')
+    .addEventListener('recording-finished', (evt) => {
+      const audio = document.createElement('audio')
+      audio.src = URL.createObjectURL(evt.detail.blob)
+      audio.play()
+    })
+</script>

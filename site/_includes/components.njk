@@ -1,0 +1,32 @@
+---
+layout: base.njk
+---
+<script src="/assets/js/{{ component }}.js"></script>
+<div class='max-w-4xl mx-auto'>
+<div class='flex flex-row pt-20 pb-2 px-10 items-end'>
+  <a href='/'><h1 class='text-2xl font-bold font-r-sans'> Cloud Concept Page </h1></a>
+</div>
+<hr class='border-2 border-black mx-10'></hr>
+<div class='flex flex-col gap-4 mt-4'>
+  <h2 class='text-xl font-bold capitalize mx-10'> {{ component }} </h2>
+  <a class='mx-10 italic text-blue-600' href='/assets/js/{{ component }}.js'>
+    > source code
+  </a>
+  <div class='mx-10 italic'>
+  {{ description | renderContent("md") | safe }}
+</div>
+  <div class='flex flex-row items-center justify-center p-4 mx-10'>
+    {{ content | safe }}
+  </div>
+  <div class='flex-1 text-xs sm:text-base sm:mx-10'>
+    {% highlight "html" %}
+    {{ content | safe }}
+    {% endhighlight %}
+  </div>
+  <p class='mx-10'> Full source code for the component: </p>
+  <div class='sm:mx-10 text-xs sm:text-base'>
+    {% highlight "js" %}
+    {% include '../assets/js/' + component + '.js' %}
+    {% endhighlight %}
+  </div>
+</div

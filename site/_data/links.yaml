@@ -1,0 +1,5 @@
+- name: search
+  href: https://google.com
+  external: true
+- name: news
+  href: https://theguardian.com

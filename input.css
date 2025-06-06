@@ -1,0 +1,7 @@
+@import "tailwindcss" source("./site");
+
+@theme {
+  --font-r-serif: "Roboto Slab", serif;
+  --font-r-sans: "Roboto", sans-serif;
+  --font-r-monospace: "Source Code Pro", monospace;
+}
