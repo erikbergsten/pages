@@ -6,7 +6,10 @@
   "scripts": {
     "eleventy-dev": "npx @11ty/eleventy --serve --input site/ --output _build/",
     "tailwind-dev": "npx @tailwindcss/cli -i ./input.css -o ./site/assets/output.css -w",
-    "dev": "npx concurrently -c green,blue \"npm run eleventy-dev\" \"npm run tailwind-dev\""
+    "dev": "npx concurrently -c green,blue \"npm run eleventy-dev\" \"npm run tailwind-dev\"",
+    "tailwind-build": "npx @tailwindcss/cli -i ./input.css -o ./site/assets/output.css",
+    "eleventy-build": "npx @11ty/eleventy --input site/ --output docs/",
+    "build": "npm run tailwind-build && npm run eleventy-build"
   },
   "keywords": [],
   "author": "",
