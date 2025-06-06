@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html class='h-full'>
+<html class="h-full">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> the pages </title>
-    <link rel='stylesheet' href='/assets/output.css' />
+    <link rel="stylesheet" href="/pages/assets/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link
-        href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
-        rel="stylesheet"
-    />
-    <link
-        href="/assets/style.css"
-        rel="stylesheet"
-    />
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link href="/pages/assets/style.css" rel="stylesheet">
   </head>
-  <body class='h-full font-r-serif'>
-    <img class='absolute top-5 right-5 h-auto w-30' src="/assets/ccp.jpg"></img>
-    <script src="/assets/js/voice-recorder.js"></script>
-<div class='max-w-4xl mx-auto'>
-<div class='flex flex-row pt-20 pb-2 px-10 items-end'>
-  <a href='/'><h1 class='text-2xl font-bold font-r-sans'> Cloud Concept Page </h1></a>
+  <body class="h-full font-r-serif">
+    <img class="absolute top-5 right-5 h-auto w-30" src="/pages/assets/ccp.jpg">
+    <script src="/pages/assets/js/voice-recorder.js"></script>
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-row pt-20 pb-2 px-10 items-end">
+  <a href="/pages/"><h1 class="text-2xl font-bold font-r-sans"> Cloud Concept Page </h1></a>
 </div>
-<hr class='border-2 border-black mx-10'></hr>
-<div class='flex flex-col gap-4 mt-4'>
-  <h2 class='text-xl font-bold capitalize mx-10'> voice-recorder </h2>
-  <a class='mx-10 italic text-blue-600' href='/assets/js/voice-recorder.js'>
+<hr class="border-2 border-black mx-10">
+<div class="flex flex-col gap-4 mt-4">
+  <h2 class="text-xl font-bold capitalize mx-10"> voice-recorder </h2>
+  <a class="mx-10 italic text-blue-600" href="/pages/assets/js/voice-recorder.js">
     > source code
   </a>
-  <div class='mx-10 italic'>
+  <div class="mx-10 italic">
   <p>A custom-element that extends <strong>button</strong> and uses the <strong>MediaRecorder API</strong> to
 record sound when pressed. The voice-recorder emits a custom event called
 <strong>recording-finished</strong> when the button is released with a webm audo <strong>blob</strong>
@@ -39,12 +33,10 @@ captures the recording-finished event, creading an audio element and playing
 it back.</p>
 
 </div>
-  <div class='flex flex-row items-center justify-center p-4 mx-10'>
-    <button is='voice-recorder'
-  class="group rounded-lg p-5 select-none
+  <div class="flex flex-row items-center justify-center p-4 mx-10">
+    <button is="voice-recorder" class="group rounded-lg p-5 select-none
          disabled:bg-gray-200
-         bg-green-200 active:bg-red-200"
->
+         bg-green-200 active:bg-red-200">
   Press to record
 </button>
 <script>
@@ -57,7 +49,7 @@ it back.</p>
 </script>
 
   </div>
-  <div class='flex-1 text-xs sm:text-base sm:mx-10'>
+  <div class="flex-1 text-xs sm:text-base sm:mx-10">
     <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">is</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>voice-recorder<span class="token punctuation">'</span></span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>group rounded-lg p-5 select-none
          disabled:bg-gray-200
@@ -74,8 +66,8 @@ it back.</p>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
   </div>
-  <p class='mx-10'> Full source code for the component: </p>
-  <div class='sm:mx-10 text-xs sm:text-base'>
+  <p class="mx-10"> Full source code for the component: </p>
+  <div class="sm:mx-10 text-xs sm:text-base">
     <pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">VoiceRecorder</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLButtonElement</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -159,7 +151,5 @@ it back.</p>
 
 customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'voice-recorder'</span><span class="token punctuation">,</span> VoiceRecorder<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token string">'button'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
   </div>
-</div
-
-  </body>
-</html>
+</div>
+</div></body></html>
